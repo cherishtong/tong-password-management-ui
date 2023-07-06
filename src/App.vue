@@ -2,42 +2,39 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import Greet from "./components/Greet.vue";
+import InputNumber  from "primevue/InputNumber";
+import InputText from "primevue/inputtext";
 </script>
 
 <template>
-  <div class="container">
-    <h1>Welcome to Tauri!</h1>
+ <p>
+    <!-- use the router-link component for navigation. -->
+    <!-- specify the link by passing the `to` prop. -->
+    <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/about">Go to About</router-link>
+  </p>
+<router-view></router-view>
+<br/>
+<br/>
+  <div class="container bg-slate-400">
+    <div class="p-inputgroup flex-1">
+    <span class="p-inputgroup-addon">
+        <i class="pi pi-user"></i>
+    </span>
+    <InputText placeholder="Username" />
+</div>
 
-    <div class="row">
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" class="logo vite" alt="Vite logo" />
-      </a>
-      <a href="https://tauri.app" target="_blank">
-        <img src="/tauri.svg" class="logo tauri" alt="Tauri logo" />
-      </a>
-      <a href="https://vuejs.org/" target="_blank">
-        <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-      </a>
-    </div>
+<div class="p-inputgroup flex-1">
+    <span class="p-inputgroup-addon">$</span>
+    <InputNumber placeholder="Price" />
+    <span class="p-inputgroup-addon">.00</span>
+</div>
 
-    <p>Click on the Tauri, Vite, and Vue logos to learn more.</p>
-
-    <p>
-      Recommended IDE setup:
-      <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
-      +
-      <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-      +
-      <a href="https://github.com/tauri-apps/tauri-vscode" target="_blank"
-        >Tauri</a
-      >
-      +
-      <a href="https://github.com/rust-lang/rust-analyzer" target="_blank"
-        >rust-analyzer</a
-      >
-    </p>
-
-    <Greet />
+<div class="p-inputgroup flex-1">
+    <span class="p-inputgroup-addon">www</span>
+    <InputText placeholder="Website" />
+</div>
   </div>
 </template>
 

@@ -1,9 +1,16 @@
 import { createApp } from "vue";
-import "./style.css";
+import "./styles.css";
 import App from "./App.vue";
-// 通用字体
-import 'vfonts/Lato.css'
-// 等宽字体
-import 'vfonts/FiraCode.css'
+import PrimeVue from 'primevue/config';
+import router from "./routes/routes"
 
-createApp(App).mount("#app");
+//theme
+import "primevue/resources/themes/fluent-light/theme.css";     
+    
+//core
+import "primevue/resources/primevue.min.css";
+
+import 'primeicons/primeicons.css';
+
+createApp(App).use(PrimeVue).use(router).mount("#app");
+
