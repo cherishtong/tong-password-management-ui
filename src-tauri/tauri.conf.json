@@ -3,21 +3,13 @@
     "beforeDevCommand": "pnpm dev",
     "beforeBuildCommand": "pnpm build",
     "devPath": "http://localhost:1420",
-    "distDir": "../dist",
-    "withGlobalTauri": false
+    "distDir": "../dist"
   },
   "package": {
-    "productName": "tc-pwd",
+    "productName": "rustdemo",
     "version": "0.0.0"
   },
   "tauri": {
-    "allowlist": {
-      "all": false,
-      "shell": {
-        "all": false,
-        "open": true
-      }
-    },
     "bundle": {
       "active": true,
       "targets": "all",
@@ -37,10 +29,15 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "tc-pwd",
+        "title": "rustdemo",
         "width": 800,
         "height": 600
       }
     ]
+  },
+  "plugins": {
+    "shell": {
+      "open": true
+    }
   }
 }
